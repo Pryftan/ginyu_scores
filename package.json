@@ -6,7 +6,7 @@
     "react",
     "starter"
   ],
-  "main": "src/index.jsx",
+  "main": "src/index.js",
   "dependencies": {
     "@types/node": "^20.5.9",
     "@vitejs/plugin-react": "^4.0.4",
