@@ -1,2 +1,2 @@
 # ginyu_scores
-Created with CodeSandbox
+A scoreboard for tournaments.
