@@ -1,4 +1,70 @@
+:root {
+  --glaucous: #7180ac;
+  --bg-color: #16253f;
+  --text-color: #81a5b1;
+  --button-color: #46104b;
+  --input-color: #e39774;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color)
+}
+
 .App {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+
+}
+.descriptive__header {
+  display: block; 
+  margin-bottom: -1em;
+}
+
+.leader__table {
+  table-layout: fixed;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+input {
+  background-color: var(--input-color);
+  height: 20px;
+  flex: auto;
+  width: 20px;
+  margin-left: 10px;
+}
+
+form {
+  width: 30%
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+  width: 100%;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.editable__cell {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  border: none;
+}
+
+::placeholder {
+  color: var(--text-color);
 }
