@@ -38,8 +38,14 @@ input {
   margin-left: 10px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 form {
-  width: 30%
+  width: 40%
 }
 
 label {

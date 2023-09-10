@@ -2,6 +2,8 @@ import "./styles.css";
 import LeaderBoard from "./Leaderboard";
 
 export default function App() {
+  const characterList = ['Banjo & Kazooie', 'Bayonetta', 'Bowser', 'Bowser Jr.', 'Byleth', 'Captain Falcon', 'Chrom', 'Cloud', 'Corrin', 'Daisy', 'Dark Pit', 'Dark Samus', 'Diddy Kong', 'Donkey Kong', 'Dr. Mario', 'Duck Hunt', 'Falco', 'Fox', 'Ganondorf', 'Greninja', 'Hero', 'Ice Climbers', 'Ike', 'Incineroar', 'Inkling', 'Isabelle', 'Jigglypuff', 'Joker', 'Kazuya', 'Ken', 'King Dedede', 'King K. Rool', 'Kirby', 'Link', 'Little Mac', 'Lucario', 'Lucas', 'Lucina', 'Luigi', 'Mario', 'Marth', 'Mega Man', 'Meta Knight', 'Mewtwo', 'Mii Brawler', 'Mii Gunner', 'Mii Swordfighter', 'Min Min', 'Mr. Game & Watch', 'Ness', 'Olimar', 'Pac-Man', 'Palutena', 'Peach', 'Pichu', 'Pikachu', 'Piranha Plant', 'Pit', 'Pokemon Trainer', 'Pyra & Mythra', 'Richter', 'Ridley', 'R.O.B.', 'Robin', 'Rosalina & Luma', 'Roy', 'Ryu', 'Samus', 'Sephiroth', 'Sheik', 'Shulk', 'Simon', 'Snake', 'Sonic', 'Sora', 'Steve', 'Terry', 'Toon Link', 'Villager', 'Wario', 'Wii Fit Trainer', 'Wolf', 'Yoshi', 'Young Link', 'Zelda', 'Zero Suit Samus']
+  const characterPrefs = {'Aamer': ['Donkey Kong', 'Little Mac', 'Luigi', 'Sonic', 'Yoshi'], 'Billy': ['Marth', 'Min Min', 'Piranha Plant', 'Pyra & Mythra', 'R.O.B.', 'Robin', 'Steve', 'Zelda'], 'Chris': ['Captain Falcon', 'Dark Samus', 'Ganondorf', 'Isabelle', 'Lucas', 'Samus'], 'Coleman': ['Sephiroth'], 'Javier': ['Palutena', 'Zelda'], 'Kirk': ['King K. Rool'], 'Sasha': []}
   const inputMatches6 = [
     ["Billy", "Chris", "Kirk", "Sasha"],
     ["Aamer", "Billy", "Kirk", "Sasha"],
@@ -48,7 +50,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <LeaderBoard players={players} matches={inputMatches} />
+      <LeaderBoard 
+        players={players} 
+        matches={inputMatches} 
+        characters={characterList} 
+        preferences={Object.fromEntries(Object.entries(characterPrefs).filter(([k,v])=>players.includes(k)))}
+      />
     </div>
   );
 }
